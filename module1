@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+contract errorhandling {
+    uint public amount=70;
+
+    //amount cannot withdraw more than we have
+    function withdraw(uint price) public   {
+        require(amount > price, "There is not enough amount in the account");
+        amount -= price;
+    }
+
+    //Cannot deposit if it results in value greater than 200
+    function deposit(uint price) public   {
+        amount += price;
+        if (amount > 200) {
+            revert("My amount cannot be exceeded more than 200");
+        }
+    }
+
+    //Check if the amount is 0 
+    function isempty() public view returns (string memory){
+        assert(amount == 0);
+        return "Yes, I do not have any amount in my account";
+    }
+
+}
