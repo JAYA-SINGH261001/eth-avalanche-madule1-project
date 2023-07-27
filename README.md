@@ -13,3 +13,9 @@ require: It is commonly used to check for user inputs or conditions before proce
 assert: It is used to check for internal errors and invariants that should never be false. If the condition fails, the transaction will be reverted, but in most cases, gas used up until the point of assert will not be refunded.
 
 revert: It is used to revert the transaction with an error message. It is often used for custom error handling or more complex conditions.
+# Author 
+Jaya Singh
+#  License
+MIT License
+# Video Walkthrough
+https://www.loom.com/share/d76ce1cc94f84d03990bc9f639dd1b17?sid=f2c2829e-b433-4804-892a-f53dc2695f81
